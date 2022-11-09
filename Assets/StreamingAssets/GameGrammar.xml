@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<grammar xml:lang="en-US" tag-format="semantics/1.0" version="1.0" xmlns="http://www.w3.org/2001/06/grammar" root="gamelogic">
+  <rule id = "gamelogic">
+    <one-of>
+      <!--Definging Rules-->
+      <!--Seperated in sixes to represent each row and for convenience-->
+
+      <item><ruleref uri="#One"/></item>
+      <item><ruleref uri="#Two"/></item>
+      <item><ruleref uri="#Three"/></item>
+      <item><ruleref uri="#Four"/></item>
+      <item><ruleref uri="#Five"/></item>
+      <item><ruleref uri="#Six"/></item>
+      
+      <item><ruleref uri="#Seven"/></item>
+      <item><ruleref uri="#Eight"/></item>
+      <item><ruleref uri="#Nine"/></item>
+      <item><ruleref uri="#Ten"/></item>
+      <item><ruleref uri="#Eleven"/></item>
+      <item><ruleref uri="#Twelve"/></item>
+      
+      <item><ruleref uri="#Thirteen"/></item>
+      <item><ruleref uri="#Fourteen"/></item>
+      <item><ruleref uri="#Fifteen"/></item>
+      <item><ruleref uri="#Sixteen"/></item>
+      <item><ruleref uri="#Seventeen"/></item>
+      <item><ruleref uri="#Eightyteen"/></item>
+      
+      <item><ruleref uri="#Nineteen"/></item>
+      <item><ruleref uri="#Twenty"/></item>
+      <item><ruleref uri="#Twenty One"/></item>
+      <item><ruleref uri="#Twenty Two"/></item>
+      <item><ruleref uri="#Twenty Three"/></item>
+      <item><ruleref uri="#Twenty Four"/></item>
+      
+      <item><ruleref uri="#Twenty Five"/></item>
+      <item><ruleref uri="#Twenty Six"/></item>
+      <item><ruleref uri="#Twenty Seven"/></item>
+      <item><ruleref uri="#Twenty Eight"/></item>
+      <item><ruleref uri="#Twenty Nine"/></item>
+      <item><ruleref uri="#Thirty"/></item>
+      
+      <item><ruleref uri="#Thirty One"/></item>
+      <item><ruleref uri="#Thirty Two"/></item>
+      <item><ruleref uri="#Thirty Three"/></item>
+      <item><ruleref uri="#Thirty Four"/></item>
+      <item><ruleref uri="#Thirty Five"/></item>
+      <item><ruleref uri="#Thirty Six"/></item>
+      
+      <!--Rules for Menu based commands-->
+
+      <item><ruleref uri="#Start"/></item>
+      <item><ruleref uri="#Options"/></item>
+      <item><ruleref uri="#Exit"/></item>
+      <item><ruleref uri="#Replay"/></item>
+      <item><ruleref uri="#Tutorial"/></item>
+    
+      <!--Rules for rejects to avoid issues-->
+
+      <item><ruleref uri="#Rejects"/></item>
+    </one-of>
+  </rule>
+
+  <!--Automatically avoids these numbers to prevent any tiles being accidentally called-->
+  <!--VOID marks them as null when called-->
+
+  <rule id="Rejects">
+    <item>Thirty Seven</item>
+    <item>Thirty Eight</item>
+    <item>Thirty Nine</item>
+    <item>Forty</item>
+    <item>Fifty</item>
+    <item>Sixty</item>
+    <item>Seventy</item>
+    <item>Eighty</item>
+    <item>Ninety</item>
+    <ruleref special="VOID"></ruleref>
+  </rule> 
+  
+  <!--Defining numbers for rules-->
+
+  <rule id="1"><item>One</item></rule> 
+  <rule id="2"><item>Two</item></rule> 
+  <rule id="3"><item>Three</item></rule> 
+  <rule id="4"><item>Four</item></rule> 
+  <rule id="5"><item>Five</item></rule> 
+  <rule id="6"><item>Six</item></rule> 
+	
+  <rule id="7"><item>Seven</item></rule> 
+  <rule id="8"><item>Eight</item></rule> 
+  <rule id="9"><item>Nine</item></rule> 
+  <rule id="10"><item>Ten</item></rule> 
+  <rule id="11"><item>Eleven</item></rule> 
+  <rule id="12"><item>Twelve</item></rule> 
+		
+  <rule id="13"><item>Thirteen</item></rule> 
+  <rule id="14"><item>Fourteen</item></rule> 
+  <rule id="15"><item>Fifteen</item></rule> 
+  <rule id="16"><item>Sixteen</item></rule> 
+  <rule id="17"><item>Seventeen</item></rule> 
+  <rule id="18"><item>Eighteen</item></rule> 
+	
+  <rule id="19"><item>Nineteen</item></rule> 
+  <rule id="20"><item>Twenty</item></rule> 
+  <rule id="21"><item>Twenty one</item></rule> 
+  <rule id="22"><item>Twenty two</item></rule> 
+  <rule id="23"><item>Twenty three</item></rule> 
+  <rule id="24"><item>Twenty four</item></rule>  
+	
+  <rule id="25"><item>Twenty five</item></rule> 
+  <rule id="26"><item>Twenty six</item></rule> 
+  <rule id="27"><item>Twenty seven</item></rule> 
+  <rule id="28"><item>Twenty eight</item></rule> 
+  <rule id="29"><item>Twenty nine</item></rule> 
+  <rule id="30"><item>Thirty</item></rule> 
+	
+  <rule id="31"><item>Thirty one</item></rule> 
+  <rule id="32"><item>Thirty two</item></rule> 
+  <rule id="33"><item>Thirty three</item></rule> 
+  <rule id="34"><item>Thirty four</item></rule> 
+  <rule id="35"><item>Thirty five</item></rule> 
+  <rule id="36"><item>Thirty six</item></rule> 
+	
+  
+  <!--Menu Rules-->
+  <!--Several have multiple items to make it more user friendly-->
+
+
+  <rule id="Options"><item>Options</item></rule>
+
+  <rule id="Exit"><one-of><item>Exit</item><item>Quit</item></one-of></rule>
+
+  <rule id="Start"><one-of><item>Start</item><item>Begin</item></one-of></rule>
+  
+  <rule id="Replay"><one-of><item>Replay</item><item>Restart</item></one-of></rule>
+
+  <rule id="Tutorial"><item>Tutorial</item></rule>
+</grammar>
+
+
